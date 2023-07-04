@@ -42,12 +42,17 @@ def sacar():
 def emitir_extrato():
     global extrato_bancario, saldo_conta
     
+    print('\n********* Extrato Bancário **********\n')
+    
     if len(extrato_bancario) == 0:
         print('Não foram realizadas movimentações')
     else:
         for item in extrato_bancario:
             print(item)
         print(f'Saldo R$ {saldo_conta:.2f}')
+    
+    print('\n*************************************\n')
+    
 
 def main():
     os_clear_command = 'nt' if os.name ==  'cls' else 'clear'
@@ -68,5 +73,7 @@ def main():
             case operacao if operacao in 'xX':
                 print('Atendimento finalizado')
                 break
+            case _:
+                print('Operação inválida')
             
 main()
