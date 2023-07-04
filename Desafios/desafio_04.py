@@ -1,4 +1,3 @@
-import math
 import os
 
 VALOR_LIMITE_POR_SAQUE = 500
